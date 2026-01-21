@@ -7,9 +7,6 @@ from crewai import LLM
 load_dotenv()
 
 os.environ["OPENAI_API_KEY"]=os.getenv("OPENAI_API_KEY")
-# os.environ["GEMINI_API_KEY"]=os.getenv("GEMINI_API_KEY")
-# os.environ["HF_TOKEN"]=os.getenv("HF_TOKEN")
-# os.environ["OPENAI_MODEL_NAME"]="gpt-4-0125-preview"
 
 llm = LLM(
     model="openai/gpt-4o",
@@ -17,10 +14,6 @@ llm = LLM(
     temperature=0.7,
     max_tokens=4000
 )
-#llm = LLM(
-#    model="ollama/llama3:70b",
-#    base_url="http://localhost:11435"
-#)
 
 # Create a senior blog content researcher.
 blog_researcher=Agent(
@@ -48,4 +41,5 @@ blog_writer=Agent(
     tools=[yt_tool],
     llm=llm,
     allow_delegation=False,
+
 )
