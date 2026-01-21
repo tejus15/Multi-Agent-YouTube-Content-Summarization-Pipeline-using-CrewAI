@@ -1,0 +1,33 @@
+# --- Secrets and Environment Variables ---
+.env
+.env.local
+.env.*.local
+*.env
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.python-version
+
+# --- Virtual Environments ---
+.venv/
+venv/
+ENV/
+env/
+
+# --- IDEs and Editors ---
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- OS Generated ---
+.DS_Store
+Thumbs.db
+
+# --- CrewAI & Agent Specifics ---
+# If your agents generate local logs or state files
+*.log
+outputs/
